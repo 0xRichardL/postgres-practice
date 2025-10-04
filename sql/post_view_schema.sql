@@ -13,3 +13,5 @@ CREATE TABLE post_views(
 
 CREATE INDEX idx_post_views_user_id ON post_views(user_id);
 
+CREATE INDEX idx_post_views_user_count ON post_views(user_id, post_id);
+
