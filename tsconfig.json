@@ -7,8 +7,9 @@
       "esnext"
     ],
     "types": [
-      "node"
+      "node",
     ],
+    "esModuleInterop": true,
     // Other Outputs
     "sourceMap": true,
     "declaration": true,
