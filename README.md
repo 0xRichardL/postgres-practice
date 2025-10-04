@@ -47,50 +47,48 @@ The final deliverable will be:
 
 ### **Week 1 – Schema & Core Queries**
 
-- Design schema with constraints (PK, FK, CHECK, UNIQUE).
-- Add JSONB metadata column in `posts` (e.g., `{"read_time": 5, "featured": true}`).
+- [x] Design schema with constraints (PK, FK, CHECK, UNIQUE).
+  - [x] `users`
+  - [x] `posts`
+  - [x] `post_views`
+  - [ ] `comments`
+- [x] Add JSONB metadata column in `posts` (e.g., `{"read_time": 5, "featured": true}`).
 - Write queries:
-  - Top 5 most active users.
-  - Posts with JSONB filter (e.g., posts with `featured = true`).
-  - Recursive CTE: build a comment thread tree.
+  - [ ] Posts with JSONB filter (e.g., posts with `featured = true`).
+  - [x] Top 5 most active users, counted by views.
+  - [ ] Recursive CTE: build a comment thread tree.
 
 ### **Week 2 – Indexing & Performance**
 
-- Insert ~500k rows into `posts` and `comments`.
-- Benchmark queries with `EXPLAIN ANALYZE`.
-- Add B-tree, GIN, and BRIN indexes. Compare performance.
-- Document query improvement with indexes.
+- [x] Insert ~500k rows into `posts`.
+- [x] Insert ~1M rows into `post_views`.
+- [x] Insert ~500k rows into `comments`.
+- [ ] Benchmark queries with `EXPLAIN ANALYZE`.
+- [ ] Add B-tree, GIN, and BRIN indexes. Compare performance.
+- [ ] Document query improvement with indexes.
 
 ### **Week 3 – Advanced SQL Features**
 
-- Implement window functions: rank posts by views per month.
-- Create a materialized view: “Most active users this week.”
-- Write a trigger: log edits in an `audit_log` table.
-- Partition a `page_views` table by month (range partition).
+- [ ] Implement window functions: rank posts by views per month.
+- [ ] Create a materialized view: “Most active users this week.”
+- [ ] Write a trigger: log edits in an `audit_log` table.
+- [ ] Partition a `page_views` table by month (range partition).
 
 ### **Week 4 – Ops & Security**
 
-- Implement row-level security:
-  - Users can edit only their own posts.
-- Build full-text search on `posts.content` with GIN + `to_tsvector`.
-- Backup the database with `pg_dump` and restore it.
-- Deliver final **documentation**: schema diagram, queries, performance benchmarks.
+- [ ] Implement row-level security:
+  - [ ] Users can edit only their own posts.
+- [ ] Build full-text search on `posts.content` with GIN + `to_tsvector`.
+- [ ] Backup the database with `pg_dump` and restore it.
+- [ ] Deliver final **documentation**: schema diagram, queries, performance benchmarks.
 
 ## 5. **Non-Functional Requirements**
 
-- Must run on **Postgres 16+** (local via Docker or pkg).
-- Use **SQL scripts** for schema, seed data, and queries.
-- Documentation in Markdown: design choices, benchmark results, lessons learned.
+- [ ] Must run on **Postgres 16+** (local via Docker or pkg).
+- [ ] Use **SQL scripts** for schema, seed data, and queries.
+- [ ] Documentation in Markdown: design choices, benchmark results, lessons learned.
 
-## 6. **Deliverables**
-
-- `schema.sql` – database schema.
-- `seed.sql` – sample dataset.
-- `queries.sql` – all queries, CTEs, views, functions, triggers.
-- `benchmarks.md` – results of query performance tests.
-- `ops.md` – instructions for backup/restore, RLS policies, search setup.
-
-## 7. **Milestones**
+## 6. **Milestones**
 
 - **End of Week 1:** Core schema + basic queries.
 - **End of Week 2:** Indexing + performance benchmarks.
