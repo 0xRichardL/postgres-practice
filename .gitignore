@@ -34,3 +34,6 @@ go.work.sum
 # Node / pnpm
 node_modules
 pnpm-debug.log*
+
+# Seeds
+seeds/
