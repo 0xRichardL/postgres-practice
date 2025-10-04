@@ -1,2 +1,2 @@
-\COPY post_view(post_id, user_id, viewed_at) FROM './seeds/users_1k.csv' DELIMITER ',' CSV HEADER;
+\COPY post_views(post_id, user_id, viewed_at) FROM './seeds/post_views.csv' DELIMITER ',' CSV HEADER;
 

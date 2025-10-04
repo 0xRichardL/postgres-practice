@@ -11,3 +11,5 @@ CREATE TABLE post_views(
   CONSTRAINT fk_user_id FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
+CREATE INDEX idx_post_views_user_id ON post_views(user_id);
+
