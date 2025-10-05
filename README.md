@@ -76,6 +76,7 @@ The final deliverable will be:
 
 ### **Week 4 – Ops & Security**
 
+- [x] Use `psql` client with `libpq` on terminal only, not depending on tools.
 - [ ] Implement row-level security:
   - [ ] Users can edit only their own posts.
 - [ ] Build full-text search on `posts.content` with GIN + `to_tsvector`.
