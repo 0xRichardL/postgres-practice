@@ -1,4 +1,4 @@
-DROP TABLE IF EXISTS post_views;
+DROP TABLE IF EXISTS post_views CASCADE;
 
 CREATE TABLE post_views(
   -- Use inline style foreign key for simplicity.
@@ -11,7 +11,7 @@ CREATE TABLE post_views(
   CONSTRAINT fk_user_id FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
-CREATE INDEX idx_post_views_user_id ON post_views(user_id);
+CREATE INDEX IF NOT EXISTS idx_post_views_user_id ON post_views(user_id);
 
-CREATE INDEX idx_post_views_user_count ON post_views(user_id, post_id);
+CREATE INDEX IF NOT EXISTS idx_post_views_user_count ON post_views(user_id, post_id);
 

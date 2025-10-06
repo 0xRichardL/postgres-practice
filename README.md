@@ -54,7 +54,7 @@ The final deliverable will be:
   - [ ] `comments`
 - [x] Add JSONB metadata column in `posts` (e.g., `{"read_time": 5, "featured": true}`).
 - Write queries:
-  - [ ] Posts with JSONB filter (e.g., posts with `featured = true`).
+  - [x] Posts with JSONB filter (e.g., posts with `featured = true`).
   - [x] Top 5 most active users, counted by views.
   - [ ] Recursive CTE: build a comment thread tree.
 
@@ -64,8 +64,10 @@ The final deliverable will be:
 - [x] Insert ~1M rows into `post_views`.
 - [x] Insert ~500k rows into `comments`.
 - [ ] Benchmark queries with `EXPLAIN ANALYZE`.
-- [ ] Add B-tree, GIN, and BRIN indexes. Compare performance.
-- [ ] Document query improvement with indexes.
+  - [ ] Basics.
+  - [ ] Fully understand all metrics.
+- [x] Add B-tree, GIN, and BRIN indexes. Compare performance.
+- [x] Document query improvement with indexes.
 
 ### **Week 3 – Advanced SQL Features**
 
