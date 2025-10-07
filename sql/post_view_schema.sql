@@ -1,6 +1,4 @@
-DROP TABLE IF EXISTS post_views CASCADE;
-
-CREATE TABLE post_views(
+CREATE TABLE IF NOT EXISTS post_views(
   -- Use inline style foreign key for simplicity.
   post_id SERIAL REFERENCES posts(id) ON DELETE CASCADE ON UPDATE CASCADE,
   user_id SERIAL,

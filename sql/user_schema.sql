@@ -1,8 +1,3 @@
--- Cleanup stage.
-DROP TABLE IF EXISTS users CASCADE;
-
-DROP TYPE IF EXISTS user_status;
-
 -- Create an enum.
 CREATE TYPE user_status AS ENUM(
   'ONLINE',
@@ -10,7 +5,7 @@ CREATE TYPE user_status AS ENUM(
 );
 
 -- Create users table with basic column types.
-CREATE TABLE users(
+CREATE TABLE IF NOT EXISTS users(
   id SERIAL PRIMARY KEY,
   username TEXT UNIQUE NOT NULL,
   "status" user_status,

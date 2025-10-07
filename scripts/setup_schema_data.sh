@@ -1,5 +1,6 @@
 ## Init schemas
-make pqsl ./sql/user_schema.sql
+make psql ./sql/new_test_schema.sql
+make psql ./sql/user_schema.sql
 make psql ./sql/post_schema.sql
 make psql ./sql/post_view_schema.sql
 ## Seed data
