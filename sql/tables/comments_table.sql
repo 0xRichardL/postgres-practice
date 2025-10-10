@@ -1,0 +1,6 @@
+CREATE TABLE IF NOT EXISTS comments(
+  id SERIAL PRIMARY KEY,
+  post_id INT NOT NULL REFERENCES posts(id) ON DELETE CASCADE,
+  parent_id INT REFERENCES comments(id) ON DELETE CASCADE,
+  content TEXT NOT NULL
+);
