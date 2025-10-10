@@ -12,7 +12,7 @@ async function main() {
     }),
   }));
 
-  await writeCsv('./seeds/posts_500k.csv', rows);
+  await writeCsv('./seeds/posts.csv', rows);
 }
 
 main()
