@@ -20,13 +20,13 @@ WITH RECURSIVE comment_thread AS (
     c.parent_id,
     c.content,
     0 AS depth,
-    LPAD(c.id::text, 8, '0') AS "path"
+    LPAD(c.id::TEXT, 8, '0') AS "path"
   FROM
     comments c
   WHERE
     parent_id IS NULL -- Anchor condition: only root comments, no parent.
-    /* AND id = 481958 -- Filter the root comment here, best for load more. */
-    AND post_id = 218595 -- Filter by post_id to limit scope.
+    AND id = :id -- Filter the root comment here, best for load more.
+    -- AND post_id = :post_id -- Filter by post_id to limit scope.
   UNION ALL
   /*
    Recursive part: get child comments.
@@ -39,7 +39,7 @@ WITH RECURSIVE comment_thread AS (
     c.parent_id,
     LPAD(' > ' || c.content, LENGTH(c.content) + 3 +(ct.depth + 1) * 4, ' ') AS content,
     ct.depth + 1 AS depth,
-(ct.path || ':' || LPAD(c.id::text, 8, '0')) AS "path"
+(ct.path || ':' || LPAD(c.id::TEXT, 8, '0')) AS "path"
   FROM
     comments c
     INNER JOIN comment_thread ct ON c.parent_id = ct.id
@@ -51,5 +51,6 @@ FROM
 WHERE
   depth < 10 -- Limit the depth of recursion, safeguard against infinite loops.
 ORDER BY
-  "path";
+  "path"
+LIMIT 100;
 
