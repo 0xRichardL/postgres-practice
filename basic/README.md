@@ -1,10 +1,6 @@
-# Postgres practice
-
-**Project:** Blog Platform Database with Analytics & Search
+# Basic: Blog Platform Database with Analytics & Search
 
 **Duration:** 4 Weeks
-
-**Owner:** You (Developer)
 
 **Goal:** Rewarm PostgreSQL skills, moving from rusty intermediate to fluent advanced by implementing a real-world database with advanced features.
 
