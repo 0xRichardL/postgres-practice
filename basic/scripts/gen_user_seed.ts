@@ -10,7 +10,7 @@ async function main() {
     email: faker.internet.email(),
   }));
 
-  await writeCsv('./seeds/users.csv', rows);
+  await writeCsv('./basic/seeds/users.csv', rows);
 }
 
 main()

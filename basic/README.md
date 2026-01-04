@@ -55,7 +55,7 @@ The final deliverable will be:
   - [x] Posts with JSONB filter (e.g., posts with `featured = true`).
   - [x] Top 5 most active users, counted by views.
   - [x] Recursive CTE: build a comment thread tree.
-    - [ ] Optimize query by indexes.
+    - [x] Optimize query by indexes.
 
 ### **Week 2 – Indexing & Performance**
 

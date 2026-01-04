@@ -25,7 +25,7 @@ async function main() {
     };
   });
 
-  await writeCsv('./seeds/post_views.csv', rows);
+  await writeCsv('./basic/seeds/post_views.csv', rows);
 }
 
 main()

@@ -10,7 +10,7 @@ async function main() {
     content: faker.lorem.sentences(1),
   }));
 
-  await writeCsv('./seeds/comments.csv', rows);
+  await writeCsv('./basic/seeds/comments.csv', rows);
 }
 
 main()
