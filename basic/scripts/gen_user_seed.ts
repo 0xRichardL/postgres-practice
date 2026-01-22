@@ -7,10 +7,10 @@ async function main() {
   function* rows() {
     for (let i = 0; i < totalRows; i++) {
       yield {
-        username: faker.internet.username() + faker.number.int({ min: 1, max: 1000 }).toString(),
+        username: faker.internet.username() + faker.string.uuid(),
         status: faker.helpers.arrayElement(['ONLINE', 'OFFLINE']),
         email: faker.internet.email({
-          lastName: faker.number.int({ min: 1, max: 1000000 }).toString(),
+          lastName: faker.string.uuid(),
         }),
       };
     }
@@ -19,6 +19,4 @@ async function main() {
   await writeCsv('./basic/seeds/users.csv', rows());
 }
 
-main()
-  .catch(console.error)
-  .finally(() => process.exit(0));
+main().catch(console.error);

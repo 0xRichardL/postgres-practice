@@ -17,6 +17,4 @@ async function main() {
   await writeCsv('./basic/seeds/comments.csv', rows());
 }
 
-main()
-  .catch(console.error)
-  .finally(() => process.exit(0));
+main().catch(console.error);
