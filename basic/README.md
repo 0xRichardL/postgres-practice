@@ -45,7 +45,7 @@ The final deliverable will be:
   - [x] `users`
   - [x] `posts`
   - [x] `post_views`
-  - [ ] `comments`
+  - [x] `comments`
 - [x] Add JSONB metadata column in `posts` (e.g., `{"read_time": 5, "featured": true}`).
 - Write queries:
   - [x] Posts with JSONB filter (e.g., posts with `featured = true`).
@@ -58,16 +58,16 @@ The final deliverable will be:
 - [x] Insert ~500k rows into `posts`.
 - [x] Insert ~1M rows into `post_views`.
 - [x] Insert ~500k rows into `comments`.
-- [ ] Benchmark queries with `EXPLAIN ANALYZE`.
+- [x] Benchmark queries with `EXPLAIN ANALYZE`.
   - [x] Basics.
-  - [ ] Fully understand all metrics.
+  - [x] Fully understand all metrics.
 - [x] Add B-tree, GIN, and BRIN indexes. Compare performance.
 - [x] Document query improvement with indexes.
 
 ### **Week 3 – Advanced SQL Features**
 
-- [ ] Implement window functions: rank posts by views per month.
-- [ ] Create a materialized view: “Most active users this week.”
+- [x] Implement window functions: rank posts by views per month.
+- [x] Create a materialized view: “Most active users this week.”
 - [ ] Write a trigger: log edits in an `audit_log` table.
 - [ ] Partition a `page_views` table by month (range partition).
 
@@ -82,8 +82,8 @@ The final deliverable will be:
 
 ## 5. **Non-Functional Requirements**
 
-- [ ] Must run on **Postgres 16+** (local via Docker or pkg).
-- [ ] Use **SQL scripts** for schema, seed data, and queries.
+- [x] Must run on **Postgres 16+** (local via Docker or pkg).
+- [x] Use **SQL scripts** for schema, seed data, and queries.
 - [ ] Documentation in Markdown: design choices, benchmark results, lessons learned.
 
 ## 6. **Milestones**
