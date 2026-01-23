@@ -1,5 +1,5 @@
 import { faker } from '@faker-js/faker';
-import { writeCsv } from './csv_writer.js';
+import { writeCsv } from '../../shared/csv_writer.js';
 
 async function main() {
   const totalRows = 5_000_000;
